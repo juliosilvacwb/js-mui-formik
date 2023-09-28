@@ -90,7 +90,9 @@ export default function ShowInputs() {
   return (
     <div>
       <h1>
-        Hello {user?.name ? user?.name : '______'}, your phone is {user?.phone ? user?.phone : '_____'} and your mobile is {user?.mobile ? user?.mobile : '_____'}.
+        Hello {user?.name ? user?.name : '______'},&nbsp;
+        your phone is {user?.phone ? user?.phone : '_____'}&nbsp;
+        and your mobile is {user?.mobile ? user?.mobile : '_____'}.
       </h1>
       <form onSubmit={formik.handleSubmit}>
         <InputWrapper>
