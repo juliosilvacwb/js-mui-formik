@@ -76,8 +76,8 @@ interface FormikMuiMaskedTextFieldProps {
     placeholder?: string;
     type?: string;
     variant?: "filled" | "outlined" | "standard" | undefined;
-    mask?: string[];
-    alternativeMask?: string[];
+    mask?: any[];
+    alternativeMask?: any[];
     testAlternativeMask?: (value: string) => boolean;
     onChange?: ChangeEventHandler<HTMLInputElement>;
     startAdornment?: any;
@@ -86,4 +86,11 @@ interface FormikMuiMaskedTextFieldProps {
 
 declare const FormikMuiMaskedTextField: FC<FormikMuiMaskedTextFieldProps>;
 
-export { FormikMuiMaskedTextField, type FormikMuiMaskedTextFieldProps, FormikMuiTextField, type FormikMuiTextFieldProps };
+declare const BR_PHONE_MASK: (string | RegExp)[];
+declare const BR_MOBILE_MASK: (string | RegExp)[];
+declare const BR_CEP_MASK: (string | RegExp)[];
+declare const BR_CNPJ_MASK: (string | RegExp)[];
+declare const BR_CPF_MASK: (string | RegExp)[];
+declare const TEST_BR_MOBILE_MASK: (value: string) => boolean;
+
+export { BR_CEP_MASK, BR_CNPJ_MASK, BR_CPF_MASK, BR_MOBILE_MASK, BR_PHONE_MASK, FormikMuiMaskedTextField, type FormikMuiMaskedTextFieldProps, FormikMuiTextField, type FormikMuiTextFieldProps, TEST_BR_MOBILE_MASK };

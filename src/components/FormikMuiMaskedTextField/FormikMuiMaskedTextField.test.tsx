@@ -4,10 +4,15 @@ import userEvent from "@testing-library/user-event";
 import {render, screen, waitFor } from '@testing-library/react'
 
 import FormikMuiMaskedTextField from "./FormikMuiMaskedTextField";
+import { useFormik } from "formik";
 
 describe("Running Test for Julius/FormikMuiMaskedTextField", () => {
 
-  const formik = {values: {money: ''}, touched: {money: ''}, errors: {}, handleChange: () => {}, handleOnBlur: () => {}};
+
+  const formik = useFormik({
+    initialValues: {name},
+    onSubmit: () => {},
+  });
 
   test("renders the FormikMuiMaskedTextField component", async () => {
     

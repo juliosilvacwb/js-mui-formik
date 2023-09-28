@@ -10,8 +10,8 @@ export interface FormikMuiMaskedTextFieldProps {
     placeholder?: string;
     type?: string;
     variant?: "filled" | "outlined" | "standard" | undefined;
-    mask?: string[];
-    alternativeMask?: string[];
+    mask?: any[];
+    alternativeMask?: any[];
     testAlternativeMask?: (value: string) => boolean;
     onChange?: ChangeEventHandler<HTMLInputElement>;
     startAdornment?: any;

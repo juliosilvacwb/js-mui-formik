@@ -50,7 +50,7 @@ const  FormikMuiMaskedTextField:FC<FormikMuiMaskedTextFieldProps>  = ({ ...props
                 />
                 { 
                     (formik.touched[name] && formik.errors[name]) && 
-                    <FormHelperText>{formik.errors[name]}</FormHelperText> 
+                    <FormHelperText>{`${formik.errors[name]}`}</FormHelperText> 
                 }
             </FormControl>
 }
