@@ -31,7 +31,7 @@ export default function App() {
 
   return (
     <div>
-      <h1>Hello {name} </h1>
+        <h1>Hello {name} </h1>
         <form onSubmit={formik.handleSubmit}>
             <FormikMuiTextField name="name" label="Name" formik={formik}/>
             <button type="submit">Submit</button>
