@@ -3,10 +3,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import FormikMuiTextField from "./FormikMuiTextField";
 import { useFormik } from 'formik';
 
-const formik = useFormik({
-    initialValues: {name},
-    onSubmit: () => {},
-});
+const formik: any= {};
 
 const meta: Meta<typeof FormikMuiTextField> = {
   component: FormikMuiTextField,
@@ -22,7 +19,16 @@ export default meta;
 type Story = StoryObj<typeof FormikMuiTextField>;
 
 export const Primary: Story = (args) => {
-  return <FormikMuiTextField data-testId="InputField-id" {...args} formik={args.formik}/>
+
+  const formik = useFormik({
+    initialValues: {[args.name]: ''},
+    enableReinitialize: true,
+    onSubmit: (values, formikHelpers) => {
+        formikHelpers.resetForm();
+    },
+  });
+
+  return <FormikMuiTextField data-testId="InputField-id" {...args} formik={formik}/>
 }
 
 Primary.args = {

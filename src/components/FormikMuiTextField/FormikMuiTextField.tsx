@@ -1,6 +1,6 @@
 import { TextField } from "@mui/material";
 import PropTypes from 'prop-types';
-import React, { FC } from "react";
+import React, { FC, useEffect } from "react";
 import { FormikMuiTextFieldProps } from "./FormikMuiTextField.types";
 
 
@@ -13,7 +13,7 @@ const FormikMuiTextField: FC<FormikMuiTextFieldProps> = ({ ...props }) => {
                 id={id}
                 name={name}
                 label={label}
-                value={formik.values[name]}
+                value={formik.values[name] || ""}
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 type={type}

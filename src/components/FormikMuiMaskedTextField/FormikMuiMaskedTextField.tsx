@@ -6,7 +6,7 @@ import { FormikMuiMaskedTextFieldProps } from './FormikMuiMaskedTextField.types'
 
 const  FormikMuiMaskedTextField:FC<FormikMuiMaskedTextFieldProps>  = ({ ...props }) => {
 
-    const { id, name, label, formik, size, type, startAdornment, endAdornment, variant, mask, testAlternativeMask, alternativeMask } = props;
+    const { id, name, label, formik, size, type, startAdornment, endAdornment, variant, mask, testAlternativeMask, alternativeMask, ...rest } = props;
 
     const [efetiveMask, setEfetiveMask] = useState(mask)
 
@@ -37,7 +37,7 @@ const  FormikMuiMaskedTextField:FC<FormikMuiMaskedTextFieldProps>  = ({ ...props
                     name={name}
                     notched={!!formik.values[name]}
                     type={type}
-                    value={formik.values[name]}
+                    value={formik.values[name] || ""}
                     onChange={onChange}
                     onBlur={onBlur}
                     startAdornment={startAdornment}
@@ -47,6 +47,7 @@ const  FormikMuiMaskedTextField:FC<FormikMuiMaskedTextFieldProps>  = ({ ...props
                     inputProps={{
                         mask: efetiveMask
                     }}
+                    {...rest}
                 />
                 { 
                     (formik.touched[name] && formik.errors[name]) && 

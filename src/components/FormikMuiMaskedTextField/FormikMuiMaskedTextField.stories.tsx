@@ -4,11 +4,6 @@ import FormikMuiMaskedTextField from "./FormikMuiMaskedTextField";
 import { useFormik } from 'formik';
 import { BR_CEP_MASK, BR_CNPJ_MASK, BR_CPF_MASK, BR_PHONE_MASK, BR_MOBILE_MASK } from "./MaskedComponent";
 
-const formik = useFormik({
-    initialValues: {name},
-    onSubmit: () => {},
-});
-
 const meta: Meta<typeof FormikMuiMaskedTextField> = {
   component: FormikMuiMaskedTextField,
   title: "Julius/FormikMuiMaskedTextField",
@@ -21,6 +16,8 @@ const meta: Meta<typeof FormikMuiMaskedTextField> = {
 export default meta;
 
 type Story = StoryObj<typeof FormikMuiMaskedTextField>;
+
+const formik: any= {};
 
 export const Main: Story = (args) => {
   const formik = useFormik({
