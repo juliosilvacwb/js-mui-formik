@@ -46,7 +46,8 @@ export default function App() {
 ### Use input with mask
 ```js
 import { useFormik } from 'formik';
-import { BR_MOBILE_MASK, BR_PHONE_MASK, FormikMuiMaskedTextField, FormikMuiTextField } from 'js-mui-formik'
+import { FormikMuiMaskedTextField, FormikMuiTextField } from 'js-mui-formik'
+import { BR_MOBILE_MASK, BR_PHONE_MASK } from 'js-mui-formik'
 import { useState } from 'react';
 import styled from 'styled-components';
 import * as yup from 'yup';
@@ -124,5 +125,5 @@ export default function ShowInputs() {
       </form>
     </div>
   )
-} 
+}
 ```
