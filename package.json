@@ -1,6 +1,6 @@
 {
   "name": "js-mui-formik",
-  "version": "1.5.4",
+  "version": "1.5.5",
   "description": "TextFields Material UI with Formik and masks",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -66,6 +66,7 @@
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@mui/material": "^5.14.11",
+    "@types/react-text-mask": "^5.4.12",
     "formik": "^2.4.5",
     "react-text-mask": "^5.5.0"
   }
