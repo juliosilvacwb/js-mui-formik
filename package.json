@@ -1,6 +1,6 @@
 {
   "name": "js-mui-formik",
-  "version": "1.5.3",
+  "version": "1.5.4",
   "description": "TextFields Material UI with Formik and masks",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -14,25 +14,10 @@
     "build-storybook": "storybook build",
     "test": "jest"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/juliosilvacwb/js-mui-formik.git"
-  },
-  "keywords": [
-    "material",
-    "ui",
-    "formik",
-    "mask"
-  ],
-  "author": "Julio Silva",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/juliosilvacwb/js-mui-formik/issues"
-  },
-  "homepage": "https://github.com/juliosilvacwb/js-mui-formik#readme",
   "devDependencies": {
     "@babel/preset-env": "^7.22.20",
     "@babel/preset-react": "^7.22.15",
+    "@babel/preset-typescript": "^7.23.0",
     "@rollup/plugin-commonjs": "^25.0.4",
     "@rollup/plugin-node-resolve": "^15.2.1",
     "@rollup/plugin-terser": "^0.4.3",
@@ -50,26 +35,38 @@
     "@testing-library/user-event": "^14.5.1",
     "@types/jest": "^29.5.5",
     "@types/react": "^18.2.23",
-    "@types/react-text-mask": "^5.4.11",
-    "@types/styled-components": "^5.1.28",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
-    "rollup": "^3.29.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rollup": "^3.29.4",
     "rollup-plugin-dts": "^6.0.2",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "storybook": "^7.4.5",
-    "ts-node": "^10.9.1",
+    "ts-jest": "^29.1.1",
     "typescript": "^5.2.2"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juliosilvacwb/js-mui-formik.git"
+  },
+  "keywords": [
+    "material",
+    "ui",
+    "formik",
+    "mask"
+  ],
+  "author": "Julio Silva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juliosilvacwb/js-mui-formik/issues"
+  },
+  "homepage": "https://github.com/juliosilvacwb/js-mui-formik#readme",
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@mui/material": "^5.14.11",
     "formik": "^2.4.5",
     "react-text-mask": "^5.5.0"
-  },
-  "peerDependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
   }
 }

@@ -8,14 +8,10 @@ import { useFormik } from "formik";
 
 describe("Running Test for Julius/FormikMuiMaskedTextField", () => {
 
-
-  const formik = useFormik({
-    initialValues: {name},
-    onSubmit: () => {},
-  });
-
   test("renders the FormikMuiMaskedTextField component", async () => {
     
+    const formik: any = {values: {money: ''}, touched: {money: ''}, errors: {}, handleChange: () => {}, handleOnBlur: () => {}};
+
     const mask = ['$', /\d/, /\d/, /\d/, ',', /\d/, /\d/];
 
     render(<FormikMuiMaskedTextField mask={mask} id="money" label="money" name="money" formik={formik}/>);

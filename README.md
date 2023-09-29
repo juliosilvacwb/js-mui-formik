@@ -4,7 +4,6 @@ material ui mui formik mask
 ### How to use
 
 ```js
-
 import { useFormik } from 'formik';
 import { FormikMuiTextField} from 'js-mui-formik'
 import { useState } from 'react';
@@ -39,7 +38,6 @@ export default function App() {
     </div>
   )
 } 
-
 
 ```
 
