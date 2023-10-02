@@ -4,7 +4,7 @@ import MaskedInput from 'react-text-mask';
 
 export const BR_PHONE_MASK = ['(', /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/];
 export const BR_MOBILE_MASK= ['(', /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/];
-export const BR_CEP_MASK = [/[\d]/, /\d/,'.', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/];
+export const BR_CEP_MASK = [/\d/, /\d/,'.', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/];
 export const BR_CNPJ_MASK = [/\d/, /\d/, '.', /\d/, /\d/, /\d/, '.', /\d/, /\d/, /\d/,'/', /\d/, /\d/, /\d/, /\d/, '-', /\d/, /\d/];
 export const BR_CPF_MASK = [/\d/, /\d/, /\d/,'.', /\d/, /\d/, /\d/, '.', /\d/, /\d/, /\d/,'-', /\d/, /\d/];
 export const TEST_BR_MOBILE_MASK = (value: string) => value.replace(/\D/g, '')[2] === '9'

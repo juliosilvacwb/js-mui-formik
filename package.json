@@ -1,6 +1,6 @@
 {
   "name": "js-mui-formik",
-  "version": "1.5.5",
+  "version": "1.5.6",
   "description": "TextFields Material UI with Formik and masks",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",

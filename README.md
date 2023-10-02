@@ -130,7 +130,7 @@ export default function ShowInputs() {
 
 BR_PHONE_MASK = ['(', /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/];
 BR_MOBILE_MASK= ['(', /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/];
-BR_CEP_MASK = [/[\d]/, /\d/,'.', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/];
+BR_CEP_MASK = [/\d/, /\d/,'.', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/];
 BR_CNPJ_MASK = [/\d/, /\d/, '.', /\d/, /\d/, /\d/, '.', /\d/, /\d/, /\d/,'/', /\d/, /\d/, /\d/, /\d/, '-', /\d/, /\d/];
 BR_CPF_MASK = [/\d/, /\d/, /\d/,'.', /\d/, /\d/, /\d/, '.', /\d/, /\d/, /\d/,'-', /\d/, /\d/];
 TEST_BR_MOBILE_MASK = (value: string) => value.replace(/\D/g, '')[2] === '9'
